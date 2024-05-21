@@ -80,4 +80,4 @@ SELECT *
 FROM vendor v
 INNER JOIN vendor_booth_assignments vba
 ON v.vendor_id = vba.vendor_id
-ORDER BY vendor_name, market_date;
+ORDER BY market_date, vendor_id, product_id;
