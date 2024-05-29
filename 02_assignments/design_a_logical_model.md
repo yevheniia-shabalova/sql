@@ -15,7 +15,27 @@ _Hint, search type 1 vs type 2 slowly changing dimensions._
 
 Bonus: Are there privacy implications to this, why or why not?
 ```
-Your answer...
+Type 1 is method that overwrites the existing value with the new value and does not retain history, so in this case we will not be able to save previous adresses. A new table [CustomerAddress] will be created with:
+
+CustomerID (Foreign Key)
+Address
+City
+State
+ZipCode
+Country
+
+ Type 2 - adds a new row for the new value and maintains the existing row for historical and reporting purposes.
+[CustomerAddress]
+
+AddressID (Primary Key)
+CustomerID (Foreign Key)
+Address
+City
+State
+ZipCode
+Country
+StartDate
+EndDate (nullable, null if the address is current)
 ```
 
 ## Question 4
@@ -23,7 +43,9 @@ Review the AdventureWorks Schema [here](https://i.stack.imgur.com/LMu4W.gif)
 
 Highlight at least two differences between it and your ERD. Would you change anything in yours?
 ```
-Your answer...
+The AdventureWorks schema is much more complex than my ERD. It has many more tables, including internal tables for error logging and system information. Additionally, it is divided into logical blocks such as Sales, Person, and HR, each containing related tables. Each table in AdventureWorks has more fields, capturing detailed information about products, sales, employees, and customers.
+
+In contrast, my ERD is simpler and focuses on essential tables and fields. It includes tables for Employee, EmployeeShift Customer, Book, Order, Sales, and Date, with fewer fields per table.
 ```
 
 # Criteria
