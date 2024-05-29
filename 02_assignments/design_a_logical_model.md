@@ -43,7 +43,9 @@ Review the AdventureWorks Schema [here](https://i.stack.imgur.com/LMu4W.gif)
 
 Highlight at least two differences between it and your ERD. Would you change anything in yours?
 ```
-Your answer...
+The AdventureWorks schema is much more complex than my ERD. It has many more tables, including internal tables for error logging and system information. Additionally, it is divided into logical blocks such as Sales, Person, and HR, each containing related tables. Each table in AdventureWorks has more fields, capturing detailed information about products, sales, employees, and customers.
+
+In contrast, my ERD is simpler and focuses on essential tables and fields. It includes tables for Employee, EmployeeShift Customer, Book, Order, Sales, and Date, with fewer fields per table.
 ```
 
 # Criteria
